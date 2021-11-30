@@ -18,7 +18,7 @@ jobs:
         run: yarn
         # 👇 Adds Percy as a step in the workflow
       - name: Percy Test
-        uses: percy/exec-action@v0.1.2
+        uses: percy/exec-action@v0.3.1
         # Percy GitHub Action options
         with:
          command: "npm run percy"
