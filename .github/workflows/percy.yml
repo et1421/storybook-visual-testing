@@ -1,0 +1,26 @@
+# .github/workflows/percy.yml
+
+# Workflow name
+name: 'Percy'
+
+# Event for the workflow
+on: pull_request
+
+# List of jobs
+jobs:
+  chromatic-deployment:
+    # Operating System
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn
+        # 👇 Adds Percy as a step in the workflow
+      - name: Percy Test
+        uses: percy/exec-action@v0.1.2
+        # Percy GitHub Action options
+        with:
+         command: "npm run percy"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
