@@ -9,7 +9,8 @@
 }
 .storybook-button--primary {
   color: white;
-  background-color: rebeccapurple;
+  /*background-color: rebeccapurple;*/
+  background-color: orangered;
 }
 .storybook-button--secondary {
   color: #333;
