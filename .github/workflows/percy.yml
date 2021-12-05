@@ -7,6 +7,9 @@ name: 'Percy'
 on:
   pull_request:
     types: [ labeled ]
+  push:
+    branches:
+      - master
 
 # List of jobs
 jobs:
