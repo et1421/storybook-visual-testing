@@ -11,6 +11,7 @@ on:
     branches:
       - master
 
+# closed not working since we want master to trigger the build
 # contains(github.event.pull_request.labels.*.name, 'percy')
 
 # List of jobs
