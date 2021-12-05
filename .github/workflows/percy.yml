@@ -11,10 +11,13 @@ on:
     branches:
       - master
 
+# contains(github.event.pull_request.labels.*.name, 'percy')
+
 # List of jobs
 jobs:
   build:
-    if: ${{ github.event.label.name == 'percy' }}
+    # if: ${{ github.event.label.name == 'percy' }}
+    if: contains(github.event.pull_request.labels.*.name, 'percy')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
